@@ -42,7 +42,7 @@ nav ul li a {
 header {
     width: 100%;
     padding: 1rem 0;
-    background-color: #f0f0f0;
+    background-color: #131313;
 }
 
 section {
@@ -52,7 +52,7 @@ section {
 footer {
     width: 100%;
     padding: 1rem 0;
-    background-color: #f0f0f0;
+    background-color: #131313;
     text-align: center;
     position: relative;
     bottom: 0;
