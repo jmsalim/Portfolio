@@ -35,7 +35,6 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #000;
 }
 
 /* Additional styles for the header, sections, and footer for better appearance */
@@ -63,7 +62,7 @@ button {
    color: #131313;
    padding: 20px;
    background-color: #bbb;
-   border-radius: 30%;
+   border-radius: 20%;
 
 }
 
