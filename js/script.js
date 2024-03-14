@@ -45,7 +45,7 @@ document.querySelectorAll('.project-link-out').forEach(link => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const images = ['assets/images/image1.jpg', 'assets/images/image2.png', 'assets/images/image3.jpg'];
+    const images = ['assets/images/image1.jpg', 'assets/images/image2.jpg', 'assets/images/image3.jpg']; // Add your images here
     const slidesContainer = document.querySelector('.slides');
     const dotsContainer = document.getElementById('dots');
     
@@ -56,13 +56,19 @@ document.addEventListener('DOMContentLoaded', function() {
         images.forEach((image, index) => {
             let imgElement = document.createElement('img');
             imgElement.src = image;
+            // Set the first image as active
             if (index === 0) imgElement.classList.add('active');
             slidesContainer.appendChild(imgElement);
 
             let dotElement = document.createElement('span');
             dotElement.classList.add('dot');
+            // Set the first dot as active
             if (index === 0) dotElement.classList.add('active');
             dotElement.setAttribute('data-index', index);
+            dotElement.addEventListener('click', function() {
+                currentIndex = parseInt(this.getAttribute('data-index'));
+                updateGallery();
+            });
             dotsContainer.appendChild(dotElement);
         });
 
@@ -72,8 +78,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to update gallery based on currentIndex
     function updateGallery() {
         document.querySelectorAll('.slides img').forEach((img, index) => {
-            img.classList.remove('active');
-            if (index === currentIndex) img.classList.add('active');
+            img.style.display = 'none'; // Hide all images
+            if (index === currentIndex) {
+                img.style.display = 'block'; // Show only active image
+            }
         });
 
         document.querySelectorAll('.dots .dot').forEach((dot, index) => {
@@ -81,14 +89,6 @@ document.addEventListener('DOMContentLoaded', function() {
             if (index === currentIndex) dot.classList.add('active');
         });
     }
-
-    // Click event for dots
-    document.querySelectorAll('.dots .dot').forEach(dot => {
-        dot.addEventListener('click', function() {
-            currentIndex = parseInt(this.getAttribute('data-index'));
-            updateGallery();
-        });
-    });
 
     // Arrow navigation
     document.getElementById('leftArrow').addEventListener('click', () => {
