@@ -86,8 +86,10 @@ button {
 }
 
 .slides img {
-    width: 100%;
-    display: none;
+    display: none; /* Hide all by default */
+    width: 100%; 
+    height: auto; /* Adjust height automatically to maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
     transition: opacity 1s ease-in-out;
 }
 
