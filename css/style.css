@@ -58,6 +58,15 @@ footer {
     bottom: 0;
 }
 
+button {
+
+   color: #131313;
+   padding: 20px;
+   background-color: #bbb;
+   border-radius: 30%;
+
+}
+
 h1 {
 
     font-family: Georgia, 'Times New Roman', Times, serif;
