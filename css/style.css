@@ -19,7 +19,6 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
-    min-height: 100vh; /* Make main element at least as tall as the viewport */
 }
 
 /* Style for the navigation menu */
