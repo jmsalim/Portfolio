@@ -31,3 +31,15 @@ document.querySelectorAll('.project-link').forEach(link => {
     });
 });
 
+document.querySelectorAll('.project-link-out').forEach(link => {
+    link.addEventListener('click', function(e) {
+        console.log('Link clicked:', this.href);
+        e.preventDefault();
+        
+        const confirmRedirect = confirm('This link will take you to a third party website, do you wish to continue?');
+        
+        if (confirmRedirect) {
+            window.location.href = this.getAttribute('href');
+        }
+    });
+});
