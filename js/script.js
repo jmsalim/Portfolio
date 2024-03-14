@@ -46,7 +46,7 @@ document.querySelectorAll('.project-link-out').forEach(link => {
 // Initialize the gallery
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Document loaded');
-    const images = ['assets/images/image1.jpg', 'assets/images/image2.jpg', 'assets/images/image3.jpg']; // Add your images here
+    const images = ['assets/images/image1.jpeg', 'assets/images/image2.png', 'assets/images/image3.jpg'];
     console.log('Images array:', images);
     const slidesContainer = document.querySelector('.slides');
     const dotsContainer = document.getElementById('dots');
