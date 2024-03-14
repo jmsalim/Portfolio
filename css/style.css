@@ -17,9 +17,9 @@ main {
 }
 
 iframe {
-    max-width: 100%; /* Ensures iframe responsiveness */
-    height: auto; /* Adjust height for responsiveness or set a specific height */
-    aspect-ratio: 16 / 9; /* Optional: Adjust based on the aspect ratio you prefer */
+    width: 100%; /* Ensures iframe responsiveness */
+    height: 100%; /* Adjust height for responsiveness or set a specific height */
+    aspect-ratio: 16 / 9; /* Adjust based on the aspect ratio you prefer */
 }
 
 header {
