@@ -41,6 +41,13 @@ footer {
     width: 100%;
 }
 
+#arca {
+
+    background-color: black;
+    align-self: center;
+
+}
+
 /* Basic styles for the nav bar */
 nav#navbar {
     display: flex;
