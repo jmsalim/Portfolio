@@ -94,8 +94,9 @@ p, h2, h3, h4 {
 }
 
 .grid-item {
-
-    padding: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
     text-align: center;
     width: auto;
 
@@ -208,65 +209,18 @@ a, h3, h4 {
     background-color: #444444;
 }
 
-.spacer {
+#screen {
 
-    padding-top: 40px;
-    margin-bottom: 40px;
-    display: block;
+    background-color: rgb(170, 168, 168);
 
 }
 
+.number {
 
-/* Basic styles for the nav bar */
-nav#navbar {
-    display: flex;
-    justify-content: space-around;
-    background-color: #333;
-    padding: 1rem;
-}
-
-nav#navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem;
-}
-
-/* Styles for the Back button */
-.project-link button {
-    cursor: pointer;
-}
-
-a:hover {
-
-    color: green;
+    background-color: orange;
 
 }
 
-/* Hamburger button styling */
-.hamburger {
-    display: none;
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 1rem;
-    font-size: 1.5rem;
-}
-
-#leftArrow {
-
-    background-color: rgba(0, 255, 255, 0);
-    font-weight: bold;
-    font-size: 30px;
-
-}
-
-#rightArrow {
-
-    background-color: rgba(0, 255, 255, 0);
-    font-weight: bold;
-    font-size: 30px;
-
-}
 
 /* Responsive styling */
 @media (max-width: 768px) {
