@@ -50,19 +50,48 @@ section {
 
 footer {
     width: 100%;
+    height: 7rem;
     padding: 1rem 0;
     background-color: #131313;
     text-align: center;
     position: relative;
-    bottom: 0;
+    bottom: -5rem;
 }
 
 button {
 
    color: #131313;
-   padding: 20px;
+   padding: 10px;
    background-color: #bbb;
-   border-radius: 20%;
+
+}
+
+p, h2, h3, h4 {
+
+    margin-top: 20px;
+
+}
+
+.text-content {
+
+    width: 55rem;
+}
+
+h2 {
+
+    text-align: left;
+    border-bottom-color: #e9ecef;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    width: auto;
+
+}
+
+a, h3, h4 {
+
+    text-align: right;
+    text-decoration: none;
+    font-weight: 100;
 
 }
 
@@ -88,7 +117,7 @@ button {
 .slides img {
     display: none; /* Hide all by default */
     width: 100%; 
-    height: auto; /* Adjust height automatically to maintain aspect ratio */
+    height: 500px; /* Adjust height automatically to maintain aspect ratio */
     object-fit: cover; /* Ensures the image covers the area without distortion */
     transition: opacity 1s ease-in-out;
 }
@@ -137,7 +166,15 @@ button {
 }
 
 .dot.active {
-    background-color: #717171;
+    background-color: #444444;
+}
+
+.spacer {
+
+    padding-top: 40px;
+    margin-bottom: 40px;
+    display: block;
+
 }
 
 
@@ -160,6 +197,12 @@ nav#navbar a {
     cursor: pointer;
 }
 
+a:hover {
+
+    color: green;
+
+}
+
 /* Hamburger button styling */
 .hamburger {
     display: none;
@@ -168,6 +211,22 @@ nav#navbar a {
     border: none;
     padding: 1rem;
     font-size: 1.5rem;
+}
+
+#leftArrow {
+
+    background-color: rgba(0, 255, 255, 0);
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+#rightArrow {
+
+    background-color: rgba(0, 255, 255, 0);
+    font-weight: bold;
+    font-size: 30px;
+
 }
 
 /* Responsive styling */

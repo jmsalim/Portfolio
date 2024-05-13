@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Changing image automatically');
         currentIndex = (currentIndex + 1) % images.length;
         updateGallery();
-    }, 3000); // Change image every 3 seconds
+    }, 5000); // Change image every 3 seconds
 
     initGallery();
 });
