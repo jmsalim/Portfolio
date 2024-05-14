@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arca App Design Preview</title>
+    <link rel="stylesheet" href="../css/calculator.css ">
+</head>
+<body>
+    <header>
+        <h1 id="hero">Time Left Calculator</h1>
+    </header>
+    <main>
+    <div class="grid">
+        <div class="grid-item" id="screen">
+            <div class="message"><p id="display"></p></div>
+        </div>
+        <div class="grid-item">
+            <div class="calculator-grid">
+                <div class="age">
+                    <h3>Set how far in the future you wish to calculate:</h3>
+                    <input type="text" id="ageLimit" name="ageLimit" placeholder="How old?"><br><br>
+                    <button id="set">Set Age</button>
+                    <h3>Calculate how many days, weeks and months I have left until I am <span id="setAge">X</span> years old:</h3>
+                    <input type="text" id="age" name="age" placeholder="Insert current age."><br><br>
+                    <button id="calculate">Calculate!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <section>
+            <a href="../index.html"><button>Back to Homepage</button></a>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 João de Mendonça Salim. All rights reserved.</p>
+    </footer>
+    <script src="../js/timeLeft.js"></script>
+</body>
+</html>

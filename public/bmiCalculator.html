@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arca App Design Preview</title>
+    <link rel="stylesheet" href="../css/calculator.css ">
+</head>
+<body>
+    <header>
+        <h1 id="hero">BMI Calculator</h1>
+    </header>
+    <main>
+        <div id="bmiScreen">
+            <div class="message"><p id="bmiDisplay"></p></div>
+        </div>
+            <div class="age">
+                    <h3>Calculate your Body Mass Index (BMI)</h3>
+                    <input type="text" id="weight" name="weight" placeholder="Insert weight in kg..."><br><br>
+                    <input type="text" id="height" name="height" placeholder="Insert height in cm..."><br><br>
+                    <button id="calculate">Calculate!</button>
+            </div>
+            <div id="hide">
+                <h3>BMI Interpretation for Adults</h3>
+                <p>For adults 20 years old and older, BMI is interpreted using standard weight status categories. These categories are the same for men and women of all body types and ages.</p>
+
+                <h4>Standard Weight Status Categories</h4>
+                <table>
+                    <tr>
+                        <th>BMI</th>
+                        <th>Weight Status</th>
+                    </tr>
+                    <tr>
+                        <td id="18.5">Below 18.5</td>
+                        <td>Underweight</td>
+                    </tr>
+                    <tr>
+                        <td id="24.9">18.5 – 24.9</td>
+                        <td>Healthy Weight</td>
+                    </tr>
+                    <tr>
+                        <td id="29.9">25.0 – 29.9</td>
+                        <td>Overweight</td>
+                    </tr>
+                    <tr>
+                        <td id="30">30.0 and Above</td>
+                        <td>Obesity</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+        <section>
+            <a href="../index.html"><button>Back to Homepage</button></a>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 João de Mendonça Salim. All rights reserved.</p>
+    </footer>
+    <script src="../js/bmiScript.js"></script>
+</body>
+</html>

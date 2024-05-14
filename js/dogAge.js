@@ -15,3 +15,13 @@ calculateDogAgeButton.addEventListener('click', function() {
     console.log('Button was clicked!');
     calculateDogAge();
 });
+
+function calculateCost(milk) {
+
+    let cost = 2;
+    
+    console.log(milk + "a bottle of milk costs" + cost + "dollars")
+    
+
+    
+}
