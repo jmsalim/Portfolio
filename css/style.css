@@ -268,23 +268,36 @@ a:hover {
 
 }
 
-/* Responsive styling */
-@media (max-width: 768px) {
-    nav#navbar {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
+/* Responsive styling for mobile */
+@media (max-width: 768px) { main { align-items: center; justify-content: center; }
 
-    nav#navbar a {
-        text-align: center;
-        padding: 0.5rem;
-        border-bottom: 1px solid white;
-    }
+table, th, td { margin-right: 10%; margin-left: 10%; }
 
-    .hamburger {
-        display: block;
-    }
+.grid { grid-template-columns: auto; }
+
+.grid-item { width: 100%; }
+
+.text-content { width: 100%; }
+
+#diceResult { margin-top: 5rem; }
+
+#diceResults { width: 100%; }
+
+#gallery { max-width: 90%; }
+S
+.slides img { height: 300px; }
+
+#bmiScreen { width: 80%; } 
+
+footer { position: relative; height: auto; bottom: -10rem; text-align: center;}
+
+footer p { text-align: center; margin-bottom: 1rem;}
+
+#hide { width: 15rem; }
+
+th, td {padding: 10px 30px;}
+
+.text-content { width: 80%; }
 
 }
 
