@@ -1,5 +1,7 @@
 # João de Mendonça Salim's Portfolio Website
 
+Click this link in order to access the Portfolio: https://jmsalim.github.io/Portfolio/
+
 This repository contains the source code for João de Mendonça Salim's personal portfolio website. The site showcases João's work across various disciplines, including UI/UX design, graphic design, and web development projects.
 
 ## Features
