@@ -30,7 +30,7 @@ This project does not have any specific prerequisites other than a modern web br
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/jmsalim/Portfolio.git
 
 2. Open the index.html file in your browser to view the project.
 
