@@ -21,6 +21,14 @@ main {
     text-align: center;
 }
 
+/* v2.0 - Styles main page header */
+
+#header {
+    color: red;
+
+
+}
+
 /* Style for the navigation menu */
 nav ul {
     list-style-type: none;
