@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <title>João de Mendonça Salim's Portfolio</title>
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Theme switcher (color modes) -->
+    <script src="assets/js/theme-switcher.js"></script>
+
+
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css">
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      [data-bs-theme="dark"] .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      [data-bs-theme="dark"] .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      [data-bs-theme="dark"] .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+
+
+      <!-- Navbar -->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+      <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
+        <div class="container px-3">
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Projects</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="javascript:history.back()" class="nav-link">
+                  <i class="bx bx-arrow-back"></i> Back
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="index.html" class="nav-link">
+                  <i class="bx bx-home"></i> Home
+                  </a>
+                </li>
+                </ul>
+            </div>
+            <div class="offcanvas-header border-top">
+
+            </div>      
+          </div>
+          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+
+          </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </header>
+
+      
+      <!-- Hero -->
+      <section class="position-relative pt-5">
+
+        <!-- Background -->
+        <div class="position-absolute top-0 start-0 w-100 bg-position-bottom-center bg-size-cover bg-repeat-0" style="background-image: url(assets/img/about/hero-bg.svg);">
+          <div class="d-lg-none" style="height: 960px;"></div>
+          <div class="d-none d-lg-block" style="height: 768px;"></div>
+        </div>
+
+         <!-- Content -->
+         <div class="container position-relative zindex-5 pt-5">
+          <div class="row">
+            <div class="col-lg-6">
+             
+              <!-- Text -->
+              <h1 class="pb-2 pb-md-3">Project: Website for Stark Vehicles</h1>
+              <p class="fs-xl pb-4 mb-1 mb-md-2 mb-lg-3" style="max-width: 526px;"> I was tasked with developing a dynamic and user-friendly website for Stark Vehicles. The website was designed to complement the product launch by showcasing the product’s features, benefits, and integration with its mobile app. It features a sleek interface to reflect the brand’s innovative vision, while providing easy navigation for users to explore services, book test drives, and access customer support. Emphasizing responsiveness and performance, the website ensures a seamless experience across all devices, creating a cohesive digital presence for Stark Vehicles.</p>
+
+
+              <p class="fs-xl pb-4 mb-1 mb-md-2 mb-lg-3" style="max-width: 526px;">I was responsible for developing the website in every aspect.</p>
+
+
+              
+            </div>
+
+            <!-- Images -->
+            <div class="col-lg-6 mt-xl-3 pt-5 pt-lg-4">
+              <div class="row row-cols-2 gx-3 gx-lg-4">
+                <div class="col pt-lg-5 mt-lg-1">
+                  <img src="assets/images/starkSite/1.png" class="d-block rounded-3 mb-3 mb-lg-4" alt="Image">
+                  <img src="assets/images/starkSite/2.png" class="d-block rounded-3 mb-3 mb-lg-4" alt="Image">
+                </div>
+                <div class="col">
+                  <img src="assets/images/starkSite/3.png" class="d-block rounded-3 mb-3 mb-lg-4" alt="Image">
+                  <img src="assets/images/starkSite/4.png" class="d-block rounded-3 mb-3 mb-lg-4" alt="Image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Video Section -->
+<!-- Website Section -->
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="pb-2 pb-md-3">Explore Stark Vehicles Website:</h2>
+      <div class="ratio ratio-16x9">
+        <!-- Embedded the Stark Vehicles website - GPT -->
+        <iframe 
+          src="https://www.starkvehicles.com/" 
+          title="Stark Vehicles Website" 
+          frameborder="0" 
+          style="width: 100%; height: 100%;" 
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+<div style="margin-bottom: 5%; margin-top: 5%;"></div>
+
+<!-- Footer -->
+<footer class="footer bg-dark border-top border-light py-5" data-bs-theme="dark">
+  <div class="container">
+    <div class="row justify-content-center">
+      <!-- Second Column: Navigation Links -->
+      <div class="col-md-6 col-lg-5 col-xxl-4">
+        <div class="row row-cols-1 row-cols-sm-2">
+          <!-- Section 1: Links to Pages -->
+          <div class="col pb-2 pb-sm-0 mb-4 mb-sm-0">
+            <ul class="nav flex-column mb-3">
+              <li><h3 class="h5 pb-1 pb-sm-2 pb-lg-3">About Me</h3></li>
+              <li><a href="public/contact.html" class="nav-link text-light">Contact</a></li>
+              <li><a target="_blank" href="https://www.linkedin.com/in/joaosalim/" class="nav-link text-light">LinkedIn</a></li>
+            </ul>
+          </div>
+
+          <!-- Section 2: Language Switcher -->
+          <div class="col pb-2 pb-sm-0 mb-4 mb-sm-0">
+            <ul class="nav flex-column mb-3">
+              <li>
+                <div class="col ps-sm-4 ps-md-5">
+                  <div class="nav dropdown">
+                    <a href="#" class="nav-link dropdown-toggle fs-lg fw-normal px-0 py-1 text-light" data-bs-toggle="dropdown">
+                      <img src="assets/img/flags/en.png" class="me-2" width="20" alt="English">
+                      English
+                    </a>
+                    <div class="dropdown-menu my-1">
+                      <a href="#" class="dropdown-item fs-base pb-1">
+                        <img src="assets/img/flags/br.png" class="me-2" width="20" alt="Brazil">
+                        Portuguese
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Section -->
+    <div class="row justify-content-center">
+      <p class="nav d-block fs-sm pt-5 mb-0 text-center">
+        <span class="text-light opacity-60">&copy; 2025 All rights reserved. Made by </span>
+        <a class="nav-link d-inline-block p-0 text-light" target="_blank" rel="noopener" href="https://www.example.com">Joao de Mendonca Salim</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Footer Bottom Section -->
+    <p class="nav d-block fs-sm pt-5 mb-0">
+      <span class="text-light opacity-60">&copy; 2025 All rights reserved. Made by </span>
+      <a class="nav-link d-inline-block p-0 text-light" target="_blank" rel="noopener" href="https://www.example.com">Joao de Mendonca Salim</a>
+    </p>
+  </div>
+</footer>
+
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/lightgallery/lightgallery.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>
