@@ -1,351 +1,58 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
-  <head>
-    <meta charset="utf-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>João de Mendonça Salim's Portfolio</title>
-
-    <!-- Viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Vendor Styles -->
-    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
-
-    <!-- Main Theme Styles + Bootstrap -->
-    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
-
-    <!-- Page loading styles -->
-    <style>
-      .page-loading {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        -webkit-transition: all .4s .2s ease-in-out;
-        transition: all .4s .2s ease-in-out;
-        background-color: #fff;
-        opacity: 0;
-        visibility: hidden;
-        z-index: 9999;
-      }
-      [data-bs-theme="dark"] .page-loading {
-        background-color: #0b0f19;
-      }
-      .page-loading.active {
-        opacity: 1;
-        visibility: visible;
-      }
-      .page-loading-inner {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        -webkit-transition: opacity .2s ease-in-out;
-        transition: opacity .2s ease-in-out;
-        opacity: 0;
-      }
-      .page-loading.active > .page-loading-inner {
-        opacity: 1;
-      }
-      .page-loading-inner > span {
-        display: block;
-        font-size: 1rem;
-        font-weight: normal;
-        color: #9397ad;
-      }
-      [data-bs-theme="dark"] .page-loading-inner > span {
-        color: #fff;
-        opacity: .6;
-      }
-      .page-spinner {
-        display: inline-block;
-        width: 2.75rem;
-        height: 2.75rem;
-        margin-bottom: .75rem;
-        vertical-align: text-bottom;
-        border: .15em solid #b4b7c9;
-        border-right-color: transparent;
-        border-radius: 50%;
-        -webkit-animation: spinner .75s linear infinite;
-        animation: spinner .75s linear infinite;
-      }
-      [data-bs-theme="dark"] .page-spinner {
-        border-color: rgba(255,255,255,.4);
-        border-right-color: transparent;
-      }
-      @-webkit-keyframes spinner {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-        }
-      }
-      @keyframes spinner {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-        }
-      }
-    </style>
-
-    <!-- Page loading scripts -->
-    <script>
-      (function () {
-        window.onload = function () {
-          const preloader = document.querySelector('.page-loading');
-          preloader.classList.remove('active');
-          setTimeout(function () {
-            preloader.remove();
-          }, 1000);
-        };
-      })();
-    </script>
-  </head>
-
-
-  <!-- Body -->
-  <body>
-
-    <!-- Page loading spinner -->
-    <div class="page-loading active">
-      <div class="page-loading-inner">
-        <div class="page-spinner"></div><span>Loading...</span>
-      </div>
-    </div>
-
-
-    <!-- Page wrapper for sticky footer -->
-    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
-    <main class="page-wrapper">
-
-
-      <!-- Navbar -->
-      <header class="header navbar navbar-expand-lg navbar-sticky">
-        <div class="container px-3">
-          <div id="navbarNav" class="offcanvas offcanvas-end">
-            <div class="offcanvas-header border-bottom">
-              <h5 class="offcanvas-title">Menu</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1 id="hero">Portfolio</h1>
+    </header>
+    <div class="spacer"></div>
+    <main>
+        <div id="gallery">
+            <div class="slides">
+                <!-- Images added by JavaScript -->
             </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" aria-current="page">Recent Projects</a>
-                  <div class="dropdown-menu p-0">
-                    <div class="d-lg-flex">
-                      <div class="mega-dropdown-column pt-lg-3 pb-lg-4" style="--si-mega-dropdown-column-width: 15rem;">
-                        <ul class="list-unstyled mb-0">
-                          <li><a href="projectStarkVideo.html" class="dropdown-item">Stark - Promotional Launch Video</a></li>
-                        </ul>
-                      </div>
-                      <div class="mega-dropdown-column pt-lg-3 pb-lg-4">
-                        <ul class="list-unstyled mb-0">
-                          <li><a href="./projectStarkSite.html" class="dropdown-item d-flex align-items-center">Stark - Website Project</a></li>
-                        </ul>
-                      </div>
-                      <div class="mega-dropdown-column pt-lg-3 pb-lg-4">
-                        <ul class="list-unstyled mb-0">
-                          <li><a href="projectARCA.html" class="dropdown-item py-1">ARCA Mobile App</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Past Projects</a>
-                  <div class="dropdown-menu">
-                    <div class="d-lg-flex pt-lg-8">
-                      <div class="mega-dropdown-column">
-                        <h6 class="px-3 mb-2">UI/UX</h6>
-                        <ul class="list-unstyled mb-3">
-                          <li><a href="projectARCA.html" class="dropdown-item py-1">ARCA Mobile App</a>
-                          </li>
-                          <li><a href="projectQuestMe.html" class="dropdown-item py-1">Quest Me Mobile App</a></li>
-                        </ul>
-                      </div>
-                      <div class="mega-dropdown-column">
-                        <h6 class="px-3 mb-2">Video/Film Production</h6>
-                        <ul class="list-unstyled mb-3">
-                          <li><a href="projectStarkVideo.html" class="dropdown-item py-1">Stark Feature</a></li>
-                        </ul>
-                      </div>
-                      <div class="mega-dropdown-column">
-                        <h6 class="px-3 mb-2">Publications</h6>
-                        <ul class="list-unstyled mb-3">
-                          <li><a href="https://stars.library.ucf.edu/hut2024/15/" class="dropdown-item py-1">Thesis (external link)</a></li>
-                        </ul>
-                      </div>
-            
-                  </div>
-                                 
-                        </div>
-                </div>
-
-
-              </ul>
-
-              </div>
-            </div>  
-          </div>
-          <button id="burger" type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </header>
-
-
-      <!-- Hero -->
-      <section class="overflow-hidden pt-2 pt-md-4 pt-lg-5">
-        <div class="container pt-1 pt-sm-0">
-          <div class="row align-items-center">
-
-            <!-- Cursor parallax -->
-            <div class="col-md-7 order-md-2 mb-3 mb-sm-2 mb-md-0">
-              <div class="parallax" style="max-width: 746px;">
-                <div class="parallax-layer" data-depth="0.1">
-                  <img style="width: 250px; margin-left: 100px;" src="assets/images/profile.jpg" alt="Phone">
-                </div>
-              </div>
+            <button class="arrow left-arrow" id="leftArrow">&#10094;</button>
+            <button class="arrow right-arrow" id="rightArrow">&#10095;</button>
+            <div class="dots" id="dots">
+                <!-- Dots added by JavaScript -->
             </div>
-
-            <!-- Text + button -->
-            <div class="col-md-5 order-md-1">
-              <h1 class="display-4 mb-ms-4">Welcome to my Portfolio,</h1>
-              <p class="fs-xl pb-2 mb-4 mb-xl-5" style="max-width: 450px;">My name is 
-                João Salim and I am a Multimedia Designer and Creative artist. This page has my recent projects and some of my best work. </p>
-              </a>
-            </div>
-          </div>
         </div>
-      </section>
-
-      
-      <!-- Features -->
-      <section class="container pt-1 py-sm-2 py-md-4 py-lg-5">
-
-      </section>
-
-
-
-      <!-- Mobile App CTA -->
-      <section class="bg-secondary overflow-hidden py-2 py-sm-3 py-md-4 py-lg-5">
-        <div class="container py-5 pb-lg-4">
-          <div class="row align-items-center">
-
-        <!-- Cursor parallax -->
-        <div class="col-md-7 offset-xl-1 order-md-1">
-          <div class="parallax" style="max-width: 746px;">
-        <div class="parallax-layer" data-depth="0.1">
-          <img src="assets/images/video/vid.png" alt="video">
+        <div class="text-content">
+            <section id="projects">
+                <h2>Projects</h2>
+                <h3><a href="./landing-startup.html" class="project-link">ARCA Mobile App</a></h3>
+                <h3><a href="public/arca.html" class="project-link">ARCA Mobile App</a></h3>
+                <h3><a href="public/questme.html" class="project-link">Quest Me Mobile App</a></h3>
+            </section>
+            <section id="graphic-design">
+                <h2>Graphic Design</h2>
+                <h3><a class="project-link-out" target="_blank" href="https://www.behance.net/joaodemend?locale=en_US" target="_blank">Behance</a></h3>
+            </section>
+            <section id="web-dev">
+                <h2>Group / Student Projects</h2>
+                <h3><a href="https://devpost.com/software/campuscompanion" target="_blank" class="project-link-out">Campus Companion</a></h3>
+            </section>
+            <section id="javascript">
+                <h2>Javascript Function Exercises</h2>
+                <h3><a href="public/concatenation.html" target="_blank" class="project-link">String Concatenations</a></h3>
+                <h3><a href="public/calculator.html" target="_blank" class="project-link">Javascript Calculator</a></h3>
+                <h3><a href="public/dogAge.html" target="_blank" class="project-link">Dog Age Calculator</a></h3>
+                <h3><a href="public/timeLeftCalculator.html" target="_blank" class="project-link">Time Left Calculator</a></h3>
+                <h3><a href="public/bmiCalculator.html" target="_blank" class="project-link">BMI Calculator</a></h3>
+                <h3><a href="public/diceSimulator.html" target="_blank" class="project-link">Dice Simulator</a></h3>
+                <h3><a href="public/fizzBuzz.html" target="_blank" class="project-link">FizzBuzz Game</a></h3>
+                <h3><a href="public/randomPicker.html" target="_blank" class="project-link">Random Draw</a></h3>
+            </section>
         </div>
-
-          </div>
-        </div>
-
-        <!-- Text + Action buttons -->
-        <div class="col-md-5 col-xl-4 order-md-2 text-center text-md-start pt-lg-3">
-          <h2 class="display-5 mb-4">Check out my most recent project:</h2>
-          <p class="fs-xl pb-2 mb-4 mb-xl-5">My latest project was developing the whole concept, filming and editing a promotional video for Stark a division of Newt Mobility.</p>
-          <div class="d-flex justify-content-center justify-content-md-start">
-        <a href="projectStarkVideo.html" class="btn btn-primary">View Project</a>
-          </div>
-        </div>
-
-          </div>
-        </div>
-      </section>
-
-
     </main>
-
-
-    <!-- Footer -->
-<footer class="footer bg-dark border-top border-light py-5" data-bs-theme="dark">
-  <div class="container pt-2 pt-sm-4">
-    <div class="row">
-      
-      
-      </div>
-
-      <!-- Second Column: Navigation Links -->
-      <div class="col-md-6 col-xxl-5 offset-lg-1 offset-xl-2 offset-xxl-3">
-        <div class="row row-cols-1 row-cols-sm-2">
-          <!-- Section 1: Links to Pages -->
-          <div class="col pb-2 pb-sm-0 mb-4 mb-sm-0">
-            <ul class="nav flex-column mb-3">
-              <li><h3 class="h5 pb-1 pb-sm-2 pb-lg-3"><a href="public/about.html" class="text-light">About Me</a></h3></li>
-              <li><a href="public/contact.html" class="nav-link text-light">Contact</a></li>
-              <li><a href="public/services.html" class="nav-link text-light">Services</a></li>
-              <li><a href="public/portfolio.html" class="nav-link text-light">Portfolio</a></li>
-            </ul>
-          </div>
-
-          <!-- Section 2: Language Switcher -->
-          <div class="col pb-2 pb-sm-0 mb-4 mb-sm-0">
-            <ul class="nav flex-column mb-3">
-              <li>
-                <div class="col ps-sm-4 ps-md-5">
-                  <h3 class="h5 pb-1 pb-sm-2 pb-lg-3"><a href="public/about.html" class="text-light">Contact Me</a></h3>
-                  <div class="nav dropdown">
-                    <a href="#" class="nav-link dropdown-toggle fs-lg fw-normal px-0 py-1 text-light" data-bs-toggle="dropdown">
-                      <img src="assets/img/flags/en.png" class="me-2" width="20" alt="English">
-                      English
-                    </a>
-                    <div class="dropdown-menu my-1">
-                      <a href="#" class="dropdown-item fs-base pb-1">
-                        <img src="assets/img/flags/br.png" class="me-2" width="20" alt="Brazil">
-                        Portuguese
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer Bottom Section -->
-    <p class="nav d-block fs-sm pt-5 mb-0">
-      <span class="text-light opacity-60">&copy; 2025 All rights reserved. Made by </span>
-      <a class="nav-link d-inline-block p-0 text-light" target="_blank" rel="noopener" href="https://www.example.com">Joao de Mendonca Salim</a>
-    </p>
-  </div>
-</footer>
-
-
-
-    <!-- Back to top button -->
-    <a href="#top" class="btn-scroll-top" data-scroll>
-      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
-      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
-    </a>
-
-
-    <!-- Vendor Scripts -->
-    <script src="assets/vendor/parallax-js/dist/parallax.min.js"></script>
-
-    <!-- Main Theme Script -->
-    <script src="assets/js/theme.min.js"></script>
-  </body>
+    <footer>
+        <p>© 2024 <a href="https://www.linkedin.com/in/joaosalim/" target="_blank">João de Mendonça Salim</a>. All rights reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
 </html>
-
-<style>
-
-  main {
-    padding-left: 26px;
-    padding-right: 26px;
-  }
-
-  #burger {
-    position: fixed; /* Fixes the switch in place */
-    top: 10px; /* Adjusts the distance from the top */
-    right: 10px; /* Adjusts the distance from the right */
-    z-index: 1000; /* Ensures it's above other elements */
-  }
-</style>
