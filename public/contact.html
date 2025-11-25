@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <title>João de Mendonça Salim's Portfolio - Contact Me</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" media="screen" href="../assets/vendor/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" media="screen" href="../assets/vendor/swiper/swiper-bundle.min.css">
+
+    <link rel="stylesheet" media="screen" href="../assets/css/theme.min.css">
+
+    <style> 
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      [data-bs-theme="dark"] .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      [data-bs-theme="dark"] .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      [data-bs-theme="dark"] .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+
+  <body>
+
+    <div class="page-loading active"> <div class="page-loading-inner"> <div class="page-spinner"></div><span>Loading...</span> </div> </div>
+
+    <main class="page-wrapper">
+
+      <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
+        <div class="container px-3">
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"> <a href="javascript:history.back()" class="nav-link"> <i class="bx bx-arrow-back"></i> Back </a> </li>
+                <li class="nav-item"> <a href="../index.html" class="nav-link"> <i class="bx bx-home"></i> Home </a> </li>
+              </ul>
+            </div>
+          </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </header>
+
+      <section class="container position-relative zindex-5 pt-5 pb-5 mt-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h1 class="display-3 pb-2 pb-md-3 text-center text-primary">Let's Create Together.</h1>
+            <p class="fs-lg text-muted text-center mb-5">
+              I'm always open to discussing new projects, design challenges, or creative collaborations. Reach out using the methods below!
+            </p>
+
+            <div class="row text-center mb-5 g-4">
+                <div class="col-md-6">
+                    <div class="p-4 border border-primary rounded-3 h-100 bg-secondary shadow-lg">
+                        <i class="bx bx-chat fs-1 text-primary mb-3"></i>
+                        <h3 class="h5 fw-bold">Professional Email</h3>
+                        <p class="fs-sm text-light opacity-75 mb-3">The best way to start a conversation about a potential project or opportunity.</p>
+                        <a href="mailto:jmsalimknights@gmail.com" class="btn btn-outline-primary btn-sm">jmsalimknights@gmail.com</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-4 border border-primary rounded-3 h-100 bg-secondary shadow-lg">
+                        <i class="bx bxl-linkedin fs-1 text-primary mb-3"></i>
+                        <h3 class="h5 fw-bold">Connect on LinkedIn</h3>
+                        <p class="fs-sm text-light opacity-75 mb-3">View my comprehensive professional background and endorsements.</p>
+                        <a href="https://www.linkedin.com/in/joaosalim/" target="_blank" class="btn btn-outline-primary btn-sm">View Profile <i class="bx bx-link-external ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center pt-4">
+                <div class="col-12 text-center">
+                    <h2 class="h3 mb-4">Draft Your Email Instantly</h2>
+                    <p class="text-muted mb-4">Click the button to automatically open your default email application with the "To" and "Subject" fields pre-filled.</p>
+                    
+                    <div class="d-flex justify-content-center">
+                        <button id="emailDraftButton" class="btn btn-primary btn-lg px-5 shadow-lg" type="button">
+                            <i class="bx bx-send me-2"></i>Start Conversation
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <script>
+                // JavaScript to dynamically set the mailto link when the button is clicked
+                document.addEventListener('DOMContentLoaded', function() {
+                    const button = document.getElementById('emailDraftButton');
+                    
+                    if (button) {
+                        const recipient = 'jmsalimknights@gmail.com';
+                        const subject = encodeURIComponent('Portfolio Inquiry: Project/Opportunity Discussion');
+                        
+                        // Construct the full mailto URL
+                        const mailtoLink = `mailto:${recipient}?subject=${subject}`;
+                        
+                        // Set the button's action to redirect to the mailto link
+                        button.addEventListener('click', function() {
+                            window.location.href = mailtoLink;
+                        });
+                    }
+                });
+            </script>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+
+    <footer class="footer bg-dark border-top border-light py-5" data-bs-theme="dark">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-5 col-xxl-4">
+            <div class="row row-cols-1 row-cols-sm-2">
+              <div class="col pb-2 pb-sm-0 mb-4 mb-sm-0">
+                <ul class="nav flex-column mb-3">
+                  <li><h3 class="h5 pb-1 pb-sm-2 pb-lg-3">About Me</h3></li>
+                  <li><a href="contact.html" class="nav-link text-light">Contact</a></li>
+                  <li><a target="_blank" href="https://www.linkedin.com/in/joaosalim/" class="nav-link text-light">LinkedIn</a></li>
+                </ul>
+              </div>
+
+              <div class="col pb-2 pb-sm-0 mb-4 mb-sm-0">
+                <ul class="nav flex-column mb-3">
+                  <li>
+                    <div class="col ps-sm-4 ps-md-5">
+                      <div class="nav dropdown">
+                        <a href="#" class="nav-link dropdown-toggle fs-lg fw-normal px-0 py-1 text-light" data-bs-toggle="dropdown">
+                          <img src="../assets/img/flags/en.png" class="me-2" width="20" alt="English">
+                          English
+                        </a>
+                        <div class="dropdown-menu my-1">
+                          <a href="#" class="dropdown-item fs-base pb-1">
+                            <img src="../assets/img/flags/br.png" class="me-2" width="20" alt="Brazil">
+                            Portuguese
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <p class="nav d-block fs-sm pt-5 mb-0 text-center">
+            <span class="text-light opacity-60">&copy; 2025 All rights reserved. Made by </span>
+            <a class="nav-link d-inline-block p-0 text-light" target="_blank" rel="noopener" href="https://www.example.com">Joao de Mendonca Salim</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="bx bx-chevron-up"></i>
+    </a>
+
+
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/js/theme.min.js"></script>
+  </body>
+</html>
