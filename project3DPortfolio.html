@@ -2,133 +2,194 @@
 <html lang="en" data-bs-theme="dark">
   <head>
     <meta charset="utf-8">
-    <title>João de Mendonça Salim's Portfolio - Algorithmic Oracle</title>
+    <title>João de Mendonça Salim's Portfolio - A-frame P5.js 3D Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
     <style>
-      .page-loading {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        -webkit-transition: all .4s .2s ease-in-out;
-        transition: all .4s .2s ease-in-out;
-        background-color: #fff;
-        opacity: 0;
-        visibility: hidden;
-        z-index: 9999;
-      }
-      [data-bs-theme="dark"] .page-loading {
-        background-color: #0b0f19;
-      }
-      .page-loading.active {
-        opacity: 1;
-        visibility: visible;
-      }
-      .page-loading-inner {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        -webkit-transition: opacity .2s ease-in-out;
-        transition: opacity .2s ease-in-out;
-        opacity: 0;
-      }
-      .page-loading.active > .page-loading-inner {
-        opacity: 1;
-      }
-      .page-loading-inner > span {
-        display: block;
-        font-size: 1rem;
-        font-weight: normal;
-        color: #9397ad;
-      }
-      [data-bs-theme="dark"] .page-loading-inner > span {
-        color: #fff;
-        opacity: .6;
-      }
-      .page-spinner {
-        display: inline-block;
-        width: 2.75rem;
-        height: 2.75rem;
-        margin-bottom: .75rem;
-        vertical-align: text-bottom;
-        border: .15em solid #b4b7c9;
-        border-right-color: transparent;
-        border-radius: 50%;
-        -webkit-animation: spinner .75s linear infinite;
-        animation: spinner .75s linear infinite;
-      }
-      [data-bs-theme="dark"] .page-spinner {
-        border-color: rgba(255,255,255,.4);
-        border-right-color: transparent;
-      }
-      @-webkit-keyframes spinner {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-        }
-      }
-      @keyframes spinner {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-        }
-      }
-    </style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      [data-bs-theme="dark"] .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      [data-bs-theme="dark"] .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      [data-bs-theme="dark"] .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
     <script>
-      (function () {
-        window.onload = function () {
-          const preloader = document.querySelector('.page-loading');
-          preloader.classList.remove('active');
-          setTimeout(function () {
-            preloader.remove();
-          }, 1000);
-        };
-      })();
-</script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
   </head>
   <body>
+    <div class="page-loading active"> 
+      <div class="page-loading-inner"> 
+        <div class="page-spinner"></div>
+        <span>Loading...</span> 
+      </div> 
+    </div>
+
     <main class="page-wrapper">
       <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
-        </header>
+        <div class="container px-3">
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom"> 
+              <h5 class="offcanvas-title">Projects</h5> 
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button> 
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"> <a href="javascript:history.back()" class="nav-link"> <i class="bx bx-arrow-back"></i> Back </a> </li>
+                <li class="nav-item"> <a href="index.html" class="nav-link"> <i class="bx bx-home"></i> Home </a> </li>
+              </ul>
+            </div>
+          </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> 
+            <span class="navbar-toggler-icon"></span> 
+          </button>
+        </div>
+      </header>
 
       <section class="position-relative pt-5">
         <div class="container position-relative zindex-5 pt-5">
           <div class="row">
             <div class="col-lg-12">
-              <h1 class="pb-2 pb-md-3">Algorithmic Oracle: P5 A-Frame 3D Project</h1>
-              <p class="fs-xl pb-4 mb-1 mb-md-2 mb-lg-3">The **Algorithmic Oracle** is my final **3D Project**, developed using P5.js and **A-Frame**. It is an immersive installation that [**Describe the visual and conceptual focus of the installation. E.g., creates an abstract data sculpture, simulates a digital meditative space, etc.**].</p>
+              <h1 class="pb-2 pb-md-3">A-frame P5.js 3D Portfolio</h1>
+              <p class="fs-xl pb-4 mb-1 mb-md-2 mb-lg-3">This <strong>3D Portfolio</strong>strong> explores the powerful 3D rendering capabilities of <strong>A-Frame</strong>strong>, a framework built on top of P5.js. It allows for the creation of immersive 3D environments and scenes that can be viewed and navigated, including compatibility with VR systems.</p>
               
               <h2 class="h3 pt-4 mb-3">Why 3D is Necessary for this Project</h2>
-              <p>This project is significantly **better as a 3D experience** than as a static image or video for the following reasons:</p>
+              <p>This project is significantly <strong>better as a 3D experience</strong>strong> than as a static image or video for the following reasons:</p>
               <ul class="list-unstyled">
-                <li><i class="bx bx-cube-alt text-primary me-2"></i>**Spatial Presence:** The "Oracle" is designed as a spatial environment. The user must navigate around the elements, allowing the geometry to shift and reveal new visual patterns based on perspective, which a 2D image cannot capture.</li>
-                <li><i class="bx bx-transfer-alt text-primary me-2"></i>**Immersion and Scale:** Using A-Frame creates a sense of scale and depth. The user is *in* the data stream or digital space, enhancing the feeling of being present with the "Oracle," which is key to the conceptual art installation goal.</li>
-                <li><i class="bx bx-walk text-primary me-2"></i>**Interactive Discovery:** The user's movement and viewing angle directly influence the experience. This active discovery is central to the project and requires the full rotational freedom provided by the 3D environment.</li>
+                <li><i class="bx bx-cube-alt text-primary me-2"></i><strong>Spatial Context:</strong>strong> The portfolio elements (projects, information) are integrated into a virtual space, allowing for a unique, layered presentation that relies on the viewer's exploration.</li>
+                <li><i class="bx bx-transfer-alt text-primary me-2"></i><strong>Immersion and Scale:</strong>strong> Using A-Frame creates a sense of scale and depth. The user is *in* the data stream or digital space, enhancing the feeling of being present within the virtual space</li>
+                <li><i class="bx bx-walk text-primary me-2"></i><strong>Interactive Discovery:</strong>strong> The user's movement and viewing angle directly influence the experience. This active discovery is central to the project and requires the full rotational freedom provided by the 3D environment.</li>
               </ul>
+              
+              <h2 class="h3 pt-4 mb-3">Live 3D Experience (Embedded)</h2>
+              <p class="mb-4">Explore the spatial environment of the 3D Portfolio below. Use your mouse and keyboard to navigate the scene.</p>
 
+              <div class="ratio ratio-16x9 mb-5" style="min-height: 500px;">
+                <iframe 
+                    src="https://editor.p5js.org/jmsalimknights/full/11kFuHA59" 
+                    allowfullscreen 
+                    style="border: 2px solid var(--bs-primary); border-radius: 8px;"
+                    title="A-frame P5.js 3D Portfolio Interactive Sketch">
+                </iframe>
+              </div>
+              
               <h2 class="h3 pt-4 mb-3">Experience and Code Links</h2>
-              <p>Explore the spatial environment of the **Algorithmic Oracle** and view the code that defines its 3D geometry.</p>
+              <p>View the live project and the code on the following platforms:</p>
 
               <div class="d-flex flex-wrap gap-3 pt-3">
-                  <a href="https://jmsalim.github.io/algorithmicOracle/" target="_blank" class="btn btn-primary"><i class="bx bx-cube me-2"></i>Explore 3D World</a>
-                  <a href="https://editor.p5js.org/jmsalim/sketches/xxxxxxxx" target="_blank" class="btn btn-outline-secondary" disabled><i class="bx bxl-codepen me-2"></i>p5.js Code (Need Link)</a>
+                  <a href="https://jmsalim.github.io/algorithmicOracle/" target="_blank" class="btn btn-primary"><i class="bx bx-cube me-2"></i>Explore Live World (GitHub Page)</a>
+                  <a href="https://editor.p5js.org/jmsalimknights/full/11kFuHA59" target="_blank" class="btn btn-outline-secondary"><i class="bx bxl-codepen me-2"></i>p5.js Code (Editor Link)</a>
                   <a href="https://github.com/jmsalim/algorithmicOracle" target="_blank" class="btn btn-outline-dark"><i class="bx bxl-github me-2"></i>GitHub Repo</a>
               </div>
-              <p class="mt-2 text-danger"><small>**NOTE:** Please replace the placeholder link `https://editor.p5js.org/jmsalim/sketches/xxxxxxxx` with the actual p5.js editor link.</small></p>
 
             </div>
           </div>
         </div>
       </section>
 
+      <section class="container pt-5 pb-5">
+          <h2 class="h3 text-center mb-4">Explore More Creative Projects</h2>
+          <div class="row justify-content-center">
+              <div class="col-lg-8">
+                  <div class="row row-cols-2 row-cols-sm-3 g-3 text-center">
+                      <div class="col">
+                          <a href="projectVistaPage.html" class="btn btn-outline-secondary w-100">Vista Page (Game)</a>
+                      </div>
+                      <div class="col">
+                          <a href="projectNonSenseGames.html" class="btn btn-outline-secondary w-100">NonSense Games</a>
+                      </div>
+                      <div class="col">
+                          <a href="projectQuantumQuest.html" class="btn btn-outline-secondary w-100">Quantum Quest (Game)</a>
+                      </div>
+                      <div class="col">
+                          <a href="projectDTOProject.html" class="btn btn-outline-secondary w-100">DTO Project (Interactive)</a>
+                      </div>
+                      <div class="col">
+                          <a href="projectAlgorithmicOracle.html" class="btn btn-secondary w-100 active">3D Portfolio</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
       </main>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/js/theme.min.js"></script>
